@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zip Reader</title>
+        <script src="extract.js"></script>
+    </head>
+    <body>
+        <input type="file" name="zipFile" id="zipFile">
+        <div id="output"></div>
+    </body>
+
+    <script>
+        document.getElementById('zipFile').addEventListener('change', () => {
+            let reader = new FileReader();
+            reader.onload = () => {
+                readZip(reader.result);
+            }
+            reader.readAsBinaryString(this.files[0]);
+        })
+    </script>
+</html>

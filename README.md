@@ -1,0 +1,1 @@
+extract.js is a proof of concept application to show that zip files can be processed efficiently, neatly, and easily in javascript. Possible usages include zip extraction within Chromium OS without the use of Native Client or WASM.
