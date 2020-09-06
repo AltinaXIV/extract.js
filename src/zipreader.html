@@ -14,9 +14,9 @@
         document.getElementById('zipFile').addEventListener('change', () => {
             let reader = new FileReader();
             reader.onload = () => {
-                readZip(reader.result);
+                process(reader.result, Enums.Action.LIST);
             }
-            reader.readAsBinaryString(this.files[0]);
+            reader.readAsArrayBuffer(this.files[0]);
         })
     </script>
 </html>
