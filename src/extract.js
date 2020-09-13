@@ -31,7 +31,7 @@ function getSignature(signatureArray) {
  * @param {number} action the action to preform on the file
  */
 function process(file, action) {
-    const fileContents = new Int8Array(file);
+    const fileContents = new Uint8Array(file);
     let position = 0;
     getSignature(fileContents.slice(0, 4));
 }
