@@ -15,6 +15,7 @@ export const FileType = {
     FILE: 1,
 }
 
+
 export const Signatures = {
     LOCAL_FILE_HEADER: 0x04034b50,
     ARCHIVE_EXTRA_DATA: 0x08064b50,
@@ -23,5 +24,5 @@ export const Signatures = {
     Z64_END_OF_CENTRAL_DIRECTORY_RECORD: 0x06064b50,
     Z64_END_OF_CENTRAL_DIRECTORY_LOCATOR: 0x07064b50,
     END_OF_CENTRAL_DIRECTORY_RECORD: 0x06054b50,
-    BAD_SIGNATURE: 0,
+    BAD_SIGNATURE: 0x00000000,
 }
