@@ -185,4 +185,7 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  "clearMocks": true,
+  "restoreMocks": true,
+  "resetMocks": true
 };

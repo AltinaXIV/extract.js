@@ -1,5 +1,4 @@
-let Extract = require("../src/extract");
-
+import * as Extract from '../src/extract';
 
 test("ensures that Int8arrays are turned into integers correctly (test 1)", () => {
     let arr = Uint8Array.of(0x2f, 0xa1);
@@ -18,6 +17,7 @@ test("ensures that readSignatures correctly returns a good signature", () => {
     let arr = Uint8Array.of(0x04, 0x03, 0x4b, 0x50);
     let expected = 0x04034b50;
     expect(Extract.getSignature(arr, 0)).toBe(expected);
+    expect(Extract.convertArrayIntoInt).toHaveBeenCalledTimes(1);
 });
 
 test("ensures Enums.Signatures.BAD_SIGNATURE is thrown when a bad signature is provided", () => {
